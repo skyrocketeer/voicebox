@@ -14,13 +14,15 @@ const resources = {
   },
 };
 
+export const SUPPORTED_LANGUAGES = ["en", "vi"];
+
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources,
     fallbackLng: "en",
-    supportedLngs: ["en", "vi"],
+    supportedLngs: SUPPORTED_LANGUAGES,
     ns: ["common"],
     defaultNS: "common",
     interpolation: {
